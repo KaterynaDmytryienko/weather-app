@@ -3,9 +3,9 @@
  * The function checks the navigator's online status and redirects the user to specific pages 
  * based on their connectivity. 
  * 
- * If the browser is online, and the current page is not '/src/index.html', 
- * it redirects to '/src/index.html'. Conversely, if the browser is offline, 
- * and the current page is not '/src/fallback.html', it redirects to '/src/fallback.html'.
+ * If the browser is online, and the current page is not 'index.html', 
+ * it redirects to 'index.html'. Conversely, if the browser is offline, 
+ * and the current page is not 'fallback.html', it redirects to 'fallback.html'.
  */
 window.addEventListener('load', () => {
     function updateStatus() {
