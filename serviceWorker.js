@@ -7,6 +7,7 @@ const cacheFiles = [
     'fallback.html',
     'fallback-js.js',
 ];
+
 /**
  * Handles the 'install' event for the service worker.
  * Caches necessary files specified in `cacheFiles`.
