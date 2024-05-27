@@ -200,7 +200,7 @@ const WeatherApp = {};
         updateCityList: function (cities) {
             const cityList = document.getElementById('cityList');
             cityList.innerHTML = ''; 
-            if(cities!==null){
+            if(cities && cities.length > 0){
                 cities.forEach(city => {
                     const suggestionElement = document.createElement('div');
                     suggestionElement.className = 'city-suggestion';
