@@ -44,8 +44,13 @@ body{
 
 @media screen and (max-width: 768px) {
     #weather-container {
-        max-width: 90%;
-        padding: 0 10px;
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #weather-container {
+        max-width: 50%;
     }
 }
 
