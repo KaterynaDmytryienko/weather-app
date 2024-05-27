@@ -1,0 +1,208 @@
+body{
+    background: #8C52FF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+#weather-container {
+    background: rgba(255,255,255,0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    -webkit-backdrop-filter: blur(10px); 
+    -moz-box-shadow: 0 8px 32px rgba(0,0,0,0.1); 
+    -webkit-box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+#controls-container{
+    backdrop-filter: blur(10px);
+
+}
+
+#app-name{
+    transform: scale3d(2, 2, 3);
+}
+
+@media screen and (max-width: 1024px) {
+    #weather-container {
+        max-width: 600px;
+        padding: 0 15px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #weather-container {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+}
+
+#volumeControl {
+    width: 150px; 
+    height: 15px; 
+    cursor: pointer;
+}
+
+
+#cityList{
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #debff4;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.city-suggestion {
+    padding: 8px 0px;
+    cursor: pointer;
+}
+
+.city-suggestion.highlight {
+    background-color: #e9ecef;
+}
+
+.city-suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+#error-message{
+    color: white;
+}
+
+h2, label, p {
+    color: #fff;
+    margin: 8px 10px 20px;
+}
+
+input{
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #debff4;
+}
+
+#actionButton, #pauseButton, #playButton, #chooseLocation {
+    background: #debff4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    font-size: 15px;
+    transition: background-color 0.15s;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+    background: #a084ca;
+    color: #000;
+}
+
+#temp-div p{
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+#weather-info{
+    font-size: 20px;
+}
+
+#weather-icon{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: none;
+}
+
+
+#hourly-forecast{
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+#hourly-item{
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+#hourly-item img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading{
+    color: #fff;
+    margin-top: 10px;
+}
+
+#weather-container h2, #weather-container label, #weather-container p {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#weather-container {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+@keyframes pulse {
+    0% { background-color: #debff4; }
+    50% { background-color: #a084ca; }
+    100% { background-color: #debff4; }
+}
+
+@-webkit-keyframes pulse {
+    0% { background-color: #debff4; }
+    50% { background-color: #a084ca; }
+    100% { background-color: #debff4; }
+}
+
+@-moz-keyframes pulse {
+    0% { background-color: #debff4; }
+    50% { background-color: #a084ca; }
+    100% { background-color: #debff4; }
+}
+
+button:hover {
+    animation: pulse 1s infinite;
+    -webkit-animation: pulse 1s infinite; 
+    -moz-animation: pulse 1s infinite;
+}
+
+#sun-svg {
+    transform-origin: center;
+}
+
+input[type="text"]:focus {
+    border-color: #ca8484; 
+}

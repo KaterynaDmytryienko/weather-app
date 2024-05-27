@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src="registerServiceWorker.js" defer></script>
+</head>
+<body>
+    <aside id = "controls-container">
+    <audio  id="audioElement">
+        <source src="audio/minecraft.m4a" type="audio/mp3">
+    </audio>
+    <button id="playButton" type="button" data-playing="false">Play</button>
+    <button id="pauseButton" type="button">Pause</button>
+    <label for="volumeControl">Volume:</label>
+    <input type="range" id="volumeControl" min="0" max="4" step="0.01" value="1">
+    </aside>
+    <main>
+    <section id="weather-container">
+        <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="Purple" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round" id="sun-svg">
+           <circle id="sun-circle" cx="12" cy="12" r="5" fill="yellow"></circle>
+           <line x1="12" y1="1" x2="12" y2="3"></line>
+           <line x1="12" y1="21" x2="12" y2="23"></line>
+           <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+           <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+           <line x1="1" y1="12" x2="3" y2="12"></line>
+           <line x1="21" y1="12" x2="23" y2="12"></line>
+           <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+
+        <h2 id="app-name">Weather App</h2>
+       <input type="text" id="city" placeholder="Enter a city" autofocus required pattern="[A-Za-z ]+">
+       <button id="actionButton">Search</button>
+       <button id="chooseLocation">Find my location</button>
+       <div id="cityList"></div>
+       <div id="error-message"></div>
+       <img id="weather-icon" alt="Weather Icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA==">
+       <div id="temp-div"></div>
+       <div id="weather-info"></div>
+       <div id="hourly-forecast"></div>
+    </section>
+</main>
+<footer>
+    <p>© 2024 Weather App</p>
+</footer>
+<script src='script.js'></script>
+</body>
+</html>
